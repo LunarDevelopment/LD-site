@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="page-header">
+                        Current Projects <small>Past, Present, Future..</small>
+                    </h1>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <h5>Project</h5>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Tech</h5>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Status</h5>
+                </div>
+            </div>
+            <div class="row" class="animate-list" ng-repeat="project in projects | filter:searchKeyword">
+                <div class="col-sm-7">
+                    <div class="row">
+                <div class="col-sm-12">
+                    <h5>{{project.title}}</h5>
+                </div>
+                    </div>
+                    <div class="row">
+                <div class="col-sm-12">
+                    <p>{{project.description}}</p>
+                </div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-3">
+                    <p>{{project.tech}}</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>{{project.status}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="well">
+                <h4>Searcb Page</h4>
+                <div class="input-group">
+                    <input ng-model="searchKeyword" type="text" class="form-control">
+                    <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    </span>
+                </div>
+                <!-- /.input-group -->
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="well">
+                        
+                <h4>What I'm Learning </h4>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="animate-list" ng-repeat="name in names | filter:searchKeyword">
+                                <h4><a>{{name}}</a></h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
