@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'flock.bootstrap.material'
   ])
     .config(function ($routeProvider) {
         $routeProvider
