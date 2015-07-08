@@ -18,6 +18,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ui.bootstrap',
     'flock.bootstrap.material'
   ])
     .config(function ($routeProvider) {
