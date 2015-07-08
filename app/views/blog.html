@@ -2,38 +2,43 @@
 
     <div class="row">
 
-        <!-- Blog Entries Column -->
+      <!-- Blog Entries Column  ng-class="generateClass();" -->
         <div class="col-sm-8">
-            <div ng-repeat="post in posts | orderBy:'-timestamp' | filter: searchKeyword" >
-            <h1 class="page-header">
-                    {{post.title}}
-                    <small>{{post.subtitle}}</small>
-                </h1>
-            <div class="row">
+          <div ng-repeat="post in posts | orderBy:'-timestamp' | filter: searchKeyword" random-panel-class="classes" class="panel">
+              <div class="panel-heading">
+                <h3 class="panel-title"> {{post.title}} 
+                  <small>{{post.subtitle}}</small></h3>
+                <div class="row">
 
-                <!-- Blog Entries Column -->
-                <div class="col-sm-6 col-xs-6">
+                  <!-- Blog Entries Column -->
+                  <div class="col-xs-6">
                     <p class="lead">
-                        by {{post.author}}
+                      by {{post.author}}
                     </p>
-                </div>
-                <div class="col-sm-6 col-xs-6">
+                  </div>
+                  <div class="col-xs-6">
                     <p><span class="glyphicon glyphicon-time"></span> Posted on 
-                    {{post.time}}</p>
+                      {{post.time}}</p>
 
+                  </div>
                 </div>
-            </div>
-            <div ng-if="post.imgurl">
-            <hr>
-            <img  class="img-responsive" src="{{post.imgurl}}" alt="">
-            </div>
-            <hr>
                 
-            <p>{{post.content}}</p>
-            
+              </div>
+              <div class="panel-body">
+                <div ng-if="post.imgurl">
+                  <hr>
+                  <img  class="img-responsive" src="{{post.imgurl}}" alt="">
+                </div>
+                <hr>
 
-            <hr>
+                <p>{{post.content}}</p>
+
+              </div>
+              <div class="home-card panel-footer">
+                <a ng-click="" class="btn btn-material-orange btn-fab btn-raised mdi-communication-quick-contacts-mail"></a>
+              </div>
             </div>
+          
             <!-- Pager -->
             <ul class="pager">
                 <li class="previous">
