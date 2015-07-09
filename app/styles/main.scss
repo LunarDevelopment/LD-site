@@ -51,6 +51,10 @@ $icon-font-path: "../bower_components/bootstrap/fonts/bootstrap/";
     max-height: 200px;
   }
 }
+ul
+{
+  list-style-type: none;
+}
 /* Projects list screen */
 .animate-list.ng-move,
 .animate-list.ng-enter,

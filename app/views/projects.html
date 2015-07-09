@@ -20,7 +20,7 @@
                     <h5>Status</h5>
                 </div>
             </div>
-            <div class="row" class="animate-list" ng-repeat="project in projects | filter:searchKeyword">
+            <div class="row well" class="animate-list" ng-repeat="project in projects | filter:searchKeyword">
                 <div class="col-sm-7">
                     <div class="row">
                 <div class="col-sm-12">
@@ -35,7 +35,13 @@
                     
                 </div>
                 <div class="col-sm-3">
-                    <p>{{project.tech}}</p>
+                  <ul>
+                    <li ng-repeat="singleTech in formatData(project.tech)">
+                      <span class="label" random-label-class="">
+                        {{singleTech}}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
                 <div class="col-sm-2">
                     <p>{{project.status}}</p>
@@ -59,10 +65,10 @@
                 <div class="col-sm-12">
                     <div class="well">
                         
-                <h4>What I'm Learning </h4>
+                        <h4>What I'm Doing.. </h4>
                         <ul class="nav nav-pills nav-stacked">
-                            <li class="animate-list" ng-repeat="name in names | filter:searchKeyword">
-                                <h4><a>{{name}}</a></h4>
+                          <li class="animate-list" ng-repeat="item in projects | unique:'category'">
+                              <h4><a ng-click="searchKeyword = item.category">{{item.category}}</a></h4>
                             </li>
                         </ul>
                     </div>

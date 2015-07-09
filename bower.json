@@ -14,7 +14,8 @@
     "bootstrap-material-design": "~0.3.0",
     "angular-bootstrap-material": "https://github.com/heyflock/angular-bootstrap-material.git#master",
     "bootstrap": "~3.3.5",
-    "angular-bootstrap": "~0.13.0"
+    "angular-bootstrap": "~0.13.0",
+    "angular-ui-utils": "bower-unique"
   },
   "devDependencies": {
     "angular-mocks": "^1.3.0"

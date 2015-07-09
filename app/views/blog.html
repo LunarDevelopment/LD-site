@@ -4,7 +4,7 @@
 
       <!-- Blog Entries Column  ng-class="generateClass();" -->
         <div class="col-sm-8">
-          <div ng-repeat="post in posts | orderBy:'-timestamp' | filter: searchKeyword" random-panel-class="classes" class="panel">
+          <div ng-repeat="post in posts | orderBy:'-timestamp' | filter: searchKeyword" random-panel-class="classes" class="panel shadow-z-2">
               <div class="panel-heading">
                 <h3 class="panel-title"> {{post.title}} 
                   <small>{{post.subtitle}}</small></h3>
@@ -38,17 +38,6 @@
                 <a ng-click="" class="btn btn-material-orange btn-fab btn-raised mdi-communication-quick-contacts-mail"></a>
               </div>
             </div>
-          
-            <!-- Pager -->
-            <ul class="pager">
-                <li class="previous">
-                    <a href="#">&larr; Older</a>
-                </li>
-                <li class="next">
-                    <a href="#">Newer &rarr;</a>
-                </li>
-            </ul>
-
         </div>
 
         <!-- Blog Sidebar Widgets Column -->
