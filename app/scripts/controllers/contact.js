@@ -8,7 +8,7 @@
  * Controller of the lunardevApp
  */
 angular.module('lunardevApp')
-  .controller('ContactCtrl', function ($scope, $modalInstance) {
+  .controller('ContactCtrl', function ($scope) {
 
   $scope.ok = function () {
     $modalInstance.close($scope.selected.item);

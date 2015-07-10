@@ -20,7 +20,8 @@ angular
     'ngTouch',
     'ui.bootstrap',
     'flock.bootstrap.material',
-    'ui.unique'
+    'ui.unique',
+    'socialLinks'
   ])
   .config(function ($routeProvider) {
     $routeProvider
