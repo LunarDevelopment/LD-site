@@ -7,19 +7,19 @@
  * # randomPanelClass
  */
 angular.module('lunardevApp')
-  .directive("randomLabelClass", function () {
+  .directive('randomLabelClass', function () {
   return {
     restrict: 'EA',
     replace: false,
     scope: {
-      ngClasses: "=ngRandomClass"
+      ngClasses: '=ngRandomClass'
     },
-    link: function (scope, elem, attr) {
+    link: function (scope, elem) {
       //Add random background class to selected element
       scope.ngClasses = [
         'default', 'primary', 'success', 'warning', 'danger', 'info'
       ];
       elem.addClass('label-' + scope.ngClasses[Math.floor(Math.random() * (scope.ngClasses.length))]);
     }
-  }
+  };
 });

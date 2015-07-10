@@ -10,11 +10,11 @@
 angular.module('lunardevApp')
   .controller('ContactCtrl', function ($scope, $modalInstance) {
 
-    $scope.ok = function () {
-      $modalInstance.close($scope.selected.item);
-    };
+  $scope.ok = function () {
+    $modalInstance.close($scope.selected.item);
+  };
 
-    $scope.cancel = function () {
-      $modalInstance.dismiss('cancel');
-    };
-  });
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+});

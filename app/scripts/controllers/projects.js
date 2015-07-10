@@ -8,10 +8,14 @@
  * Controller of the lunardevApp
  */
 angular.module('lunardevApp')
-  .controller('ProjectsCtrl', function ($scope) {
+  .controller('ProjectsCtrl', function ($scope, tableData) {
     $scope.names = ['Igor Minar', 'Brad Green', 'Dave Geddes', 'Naomi Black', 'Greg Weber', 'Dean Sofer', 'Wes Alvaro', 'John Scott', 'Daniel Nadasi'];
-    $scope.projects = [
-      {
+  $scope.projects = tableData;
+      /*
+      $scope.projects = [
+      { 
+        project_id: 1,
+        created: '',
         category: 'Development',
         title: 'Herp derp ',
         description: 'Sriracha hella salvia, locavore mumblecore occupy twee Pitchfork craft beer ugh try-hard pug disrupt.',
@@ -36,7 +40,7 @@ angular.module('lunardevApp')
         tech: 'AngularJS, Slim PHP Rest API, Bootstrap 3, Yeoman-angular',
         status: 'Ongoing '
         }
-    ];
+    ]; */
     $scope.formatData = function (objectFromDB) {
       return objectFromDB.split(', ');
     };
