@@ -10,7 +10,25 @@
 angular.module('lunardevApp')
   .controller('ProjectsCtrl', function ($scope, tableData) {
     $scope.names = ['Igor Minar', 'Brad Green', 'Dave Geddes', 'Naomi Black', 'Greg Weber', 'Dean Sofer', 'Wes Alvaro', 'John Scott', 'Daniel Nadasi'];
-  $scope.projects = tableData;
+  console.log(tableData);
+  $scope.projects = tableData.projects;
+  $scope.searchPage = function (term) { 
+    $scope.searchKeyword = term;
+  };
+  $scope.getStatusClass = function (term) {
+    if (term === 'Completed') {
+      return 'btn-material-green';
+    }
+    else if (term === 'Planned') {
+      return 'btn-material-purple';
+    }
+    else if (term === 'Cancelled') {
+      return 'btn-material-red';
+    }
+    else if (term === 'Ongoing') {
+      return 'btn-material-brown';
+    }
+  };
       /*
       $scope.projects = [
       { 

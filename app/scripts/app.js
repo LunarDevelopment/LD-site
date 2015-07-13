@@ -29,16 +29,12 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .when('/blog', {
         templateUrl: 'views/blog.html',
         controller: 'BlogCtrl',
         resolve: {
           tableData: function ($http) {
-            return $http.get('../api/posts')
+            return $http.get('http://localhost:8888/Lunar_Development/api/posts')
               .then(function (response) {
                 return response.data;
               });
@@ -50,7 +46,7 @@ angular
         controller: 'ProjectsCtrl',
         resolve: {
           tableData: function ($http) {
-            return $http.get('../api/projects')
+            return $http.get('http://localhost:8888/Lunar_Development/api/projects')
               .then(function (response) {
                 return response.data;
               });
@@ -63,13 +59,7 @@ angular
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'contact'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'contact'
+        controller: 'ContactCtrl'
       })
       .otherwise({
         redirectTo: '/'

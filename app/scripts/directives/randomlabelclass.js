@@ -11,9 +11,6 @@ angular.module('lunardevApp')
   return {
     restrict: 'EA',
     replace: false,
-    scope: {
-      ngClasses: '=ngRandomClass'
-    },
     link: function (scope, elem) {
       //Add random background class to selected element
       scope.ngClasses = [

@@ -1,56 +1,49 @@
 <div class="container">
-    <div class="row">
-        <div class="col-sm-8">
+  
             <div class="row">
                 <div class="col-sm-12">
                     <h1 class="page-header">
-                        Current Projects <small>Past, Present, Future..</small>
+                        Projects 
+                        <small>Past, Present, Future..</small>
                     </h1>
-                    
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-7">
-                    <h5>Project</h5>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Tech</h5>
-                </div>
-                <div class="col-sm-2">
-                    <h5>Status</h5>
-                </div>
-            </div>
-            <div class="row well" class="animate-list" ng-repeat="project in projects | filter:searchKeyword">
-                <div class="col-sm-7">
+    <div class="row">
+    
+        <div class="col-sm-8">
+            <div class="row well animate" ng-repeat="project in projects | filter:searchKeyword">
+                <div class="col-sm-5">
                     <div class="row">
-                <div class="col-sm-12">
-                    <h5>{{project.title}}</h5>
+                <div class="col-sm-12 text-center">
+                    <h4 style="margin-bottom: 0px;">{{project.title}}</h4>
+                    
+                  <small>{{project.created | date:'medium'}}</small>
                 </div>
                     </div>
                     <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 text-center">
                     <p>{{project.description}}</p>
                 </div>
                     </div>
                     
                 </div>
-                <div class="col-sm-3">
-                  <ul>
-                    <li ng-repeat="singleTech in formatData(project.tech)">
-                      <span class="label" random-label-class="">
+                <div class="col-sm-5 text-center align-middle">
+                  <ul class="list-inline">
+                       <li ng-repeat="singleTech in formatData(project.tech)" class=""><span class="label" random-label-class="">
                         {{singleTech}}
-                      </span>
-                    </li>
+                      </span></li>
+                       
                   </ul>
                 </div>
-                <div class="col-sm-2">
-                    <p>{{project.status}}</p>
+                <div class="col-sm-2 text-center align-middle">
+                  <a class="btn  btn-fab btn-raised" ng-class="getStatusClass(project.status)"></a>
+                    <h5>{{project.status}}</h5>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
             <div class="well">
-                <h4>Searcb Page</h4>
+                <h4>Search Page</h4>
                 <div class="input-group">
                     <input ng-model="searchKeyword" type="text" class="form-control">
                     <span class="input-group-btn">
@@ -66,11 +59,11 @@
                     <div class="well">
                         
                         <h4>What I'm Doing.. </h4>
-                        <ul class="nav nav-pills nav-stacked">
-                          <li class="animate-list" ng-repeat="item in projects | unique:'category'">
-                              <h4><a ng-click="searchKeyword = item.category">{{item.category}}</a></h4>
-                            </li>
-                        </ul>
+                      <ul class="list-inline">
+                      <li ng-repeat="item in projects | unique:'category'" class="btn btn-default btn-block" ng-click="searchPage(item.category)">
+                        {{item.category}}
+                      </li>
+                      </ul>
                     </div>
                 </div>
             </div>

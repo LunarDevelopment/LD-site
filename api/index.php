@@ -1,6 +1,6 @@
 <?php
-# include 'db-local.php';
-include 'db-server.php';
+include 'db-local.php';
+# include 'db-server.php';
 require 'Slim/Slim.php';
 date_default_timezone_set('Europe/London');
 \Slim\Slim::registerAutoloader();
@@ -173,28 +173,3 @@ function deleteProject($project_id) {
   }
 }
 ?>
-
-<!-- 
-
-Posts Fields : 
-
-post_id  ~~~~   
-category  ~~~~   
-created  ~~~~   
-title  ~~~~   
-imgurl  ~~~~   
-subtitle  ~~~~   
-author  ~~~~   
-content  ~~~~   
-
-Projects Fields : 
-
-project_id  ~~~~   
-created  ~~~~   
-category  ~~~~   
-title  ~~~~   
-description
-tech  ~~~~   
-status  ~~~~   
-
---?>

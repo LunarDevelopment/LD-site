@@ -8,13 +8,21 @@
  * Controller of the lunardevApp
  */
 angular.module('lunardevApp')
-  .controller('ContactCtrl', function ($scope) {
+  .controller('ContactCtrl', function ($scope, $log, $modal) {
+    $scope.contact = '';
+    $scope.open = function () {
 
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
+      var modalInstance = $modal.open({
+        animation: true,
+        templateUrl: 'views/contactmodal.html',
+        controller: 'ModalCtrl',
+        size: ''
+      });
 
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-});
+      modalInstance.result.then(function (selectedItem) {
+        $scope.selected = selectedItem;
+      }, function () {
+        $log.info('Modal dismissed at: ' + new Date());
+      });
+    };
+  });
