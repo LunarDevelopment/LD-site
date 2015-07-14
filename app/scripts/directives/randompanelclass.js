@@ -6,7 +6,7 @@
  * @description
  * # randomPanelClass
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
   .directive('randomPanelClass', function () {
     return {
       restrict: 'EA',

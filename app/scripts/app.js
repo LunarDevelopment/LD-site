@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name lunardevApp
+ * @name lunardevapp
  * @description
- * # lunardevApp
+ * # lunardevapp
  *
  * Main module of the application.
  */
 angular
-  .module('lunardevApp', [
+  .module('lunardevapp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -34,7 +34,7 @@ angular
         controller: 'BlogCtrl',
         resolve: {
           tableData: function ($http) {
-            return $http.get('http://localhost:8888/Lunar_Development/api/posts')
+            return $http.get('api/posts')
               .then(function (response) {
                 return response.data;
               });
@@ -46,7 +46,7 @@ angular
         controller: 'ProjectsCtrl',
         resolve: {
           tableData: function ($http) {
-            return $http.get('http://localhost:8888/Lunar_Development/api/projects')
+            return $http.get('api/projects')
               .then(function (response) {
                 return response.data;
               });

@@ -7,7 +7,7 @@
  * # Data
  * Factory in the smcmsApp.
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
     .factory('Data', function () {
         // Service logic
         // ...

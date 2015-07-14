@@ -6,7 +6,7 @@
  * @description
  * # autoActive
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
   .directive('autoActive', ['$location', function ($location) {
         return {
             restrict: 'A',

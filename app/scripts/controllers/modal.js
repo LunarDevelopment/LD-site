@@ -7,7 +7,7 @@
  * # ModalCtrl
  * Controller of the lunardevApp
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
   .controller('ModalCtrl', function ($http, $scope, $modalInstance) {
     $scope.ok = function () {
       $modalInstance.close($scope.selected.item);

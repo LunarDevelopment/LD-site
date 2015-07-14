@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the lunardevApp
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
   .controller('MainCtrl', function ($scope, $modal, $log) {
     $scope.pageClass = 'slide-animate';
     $scope.submitted = false;

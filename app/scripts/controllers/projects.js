@@ -7,7 +7,7 @@
  * # ProjectsCtrl
  * Controller of the lunardevApp
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
   .controller('ProjectsCtrl', function ($scope, tableData) {
     $scope.names = ['Igor Minar', 'Brad Green', 'Dave Geddes', 'Naomi Black', 'Greg Weber', 'Dean Sofer', 'Wes Alvaro', 'John Scott', 'Daniel Nadasi'];
   console.log(tableData);

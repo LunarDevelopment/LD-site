@@ -7,7 +7,7 @@
  * # ContactCtrl
  * Controller of the lunardevApp
  */
-angular.module('lunardevApp')
+angular.module('lunardevapp')
   .controller('ContactCtrl', function ($scope, $log, $modal) {
     $scope.contact = '';
     $scope.open = function () {
